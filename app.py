@@ -29,11 +29,25 @@ def contact_book():
              else:
                  print(f"Contact {name} not found.") 
 
-    
+       
+        def update():
+             name = input("Enter the contact name you want to update: ")
+            
+             if name in contacts:
+                 new_phone = input(f"Enter the new 10-digit phone number for {name}: ")
+                 contacts[name] = new_phone
+                 print(f"Contact {name} has been successfully updated...")
+             else:
+                 print(f"Contact {name} not found.")
+
+
              if operation == 1:
                 add()
 
              if operation == 2:
                 search()
+
+             if operation == 3:
+                update()   
 contact_book()
     
