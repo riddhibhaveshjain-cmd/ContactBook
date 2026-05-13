@@ -19,9 +19,21 @@ def contact_book():
             phone = input(f"Enter 10-digit phone number for {name}: ")
             contacts[name] = phone
             print(f"Contact {name} has been successfully added...")
-            
         
-            if operation == 1:
+            
+        def search():
+             name = input("Enter the contact name you want to search: ")
+            
+             if name in contacts:
+                 print(f"{name}'s phone number is {contacts[name]}")
+             else:
+                 print(f"Contact {name} not found.") 
+
+    
+             if operation == 1:
                 add()
+
+             if operation == 2:
+                search()
 contact_book()
     
