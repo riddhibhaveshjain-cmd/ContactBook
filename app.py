@@ -40,7 +40,12 @@ def contact_book():
              else:
                  print(f"Contact {name} not found.")
 
+        def view():
+             print("All contacts:")
+             for name, phone in contacts.items():
+                 print(f"{name}: {phone}")
 
+    
              if operation == 1:
                 add()
 
@@ -49,5 +54,8 @@ def contact_book():
 
              if operation == 3:
                 update()   
+
+             if operation == 4: 
+                view()   
 contact_book()
     
