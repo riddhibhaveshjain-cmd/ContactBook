@@ -54,8 +54,11 @@ def contact_book():
              else:
                  print(f"Contact {name} not found.")
 
-    
-    
+           
+        def exit():
+             print("Exiting the contact book app. Goodbye!")
+            
+
              if operation == 1:
                 add()
 
@@ -69,6 +72,16 @@ def contact_book():
                 view()
 
              if operation == 5:
-                delete()      
+                delete()
+
+             if operation == 6:
+                exit() 
+             
+            
+             else:
+                print("Invalid operation. Please enter a number between 1 and 6.")
+                break
+
+
 contact_book()
     
