@@ -44,7 +44,17 @@ def contact_book():
              print("All contacts:")
              for name, phone in contacts.items():
                  print(f"{name}: {phone}")
+        
 
+        def delete():
+             name = input("Enter the contact name you want to delete: ")  
+             if name in contacts:
+                 del contacts[name]
+                 print(f"Contact {name} has been successfully deleted...")
+             else:
+                 print(f"Contact {name} not found.")
+
+    
     
              if operation == 1:
                 add()
@@ -56,6 +66,9 @@ def contact_book():
                 update()   
 
              if operation == 4: 
-                view()   
+                view()
+
+             if operation == 5:
+                delete()      
 contact_book()
     
